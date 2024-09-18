@@ -103,8 +103,9 @@ namespace ArrayExercises10
 
         int[] PrintArray(int[] array)
         {
+            Console.WriteLine("The indexes of the array are: ");
             foreach (int num in theArray)
-            {
+            {               
                 Console.WriteLine("-----------");
                 Console.WriteLine(num);
             }
@@ -122,7 +123,7 @@ namespace ArrayExercises10
             }
 
             Console.WriteLine("");
-            Console.WriteLine("The sum of the indexes is:" + arraySum);
+            Console.WriteLine("The sum of the indexes is: " + arraySum);
 
             return 0;
         }
@@ -139,6 +140,11 @@ namespace ArrayExercises10
 
         int[] PrintReverse(int[] array)
         {
+            Console.WriteLine("The indexes of the array in the reverse order are: ");
+            for (int i = 4; i > -1; i--)
+            {
+                Console.WriteLine(theArray[i]);
+            }
             return null;
         }
     }
