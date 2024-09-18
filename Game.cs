@@ -130,11 +130,14 @@ namespace ArrayExercises10
 
         int PrintHighest(int[] array)
         {
+            Console.WriteLine("The highest valued index in the array is: ");
+            Array.Sort(theArray);
             return 0;
         }
 
         int PrintLowest(int[] array)
         {
+            Console.WriteLine("The lowest valued index in the array is: ");
             return 0;
         }
 
@@ -143,6 +146,7 @@ namespace ArrayExercises10
             Console.WriteLine("The indexes of the array in the reverse order are: ");
             for (int i = 4; i > -1; i--)
             {
+                Console.WriteLine("-----------");
                 Console.WriteLine(theArray[i]);
             }
             return null;
