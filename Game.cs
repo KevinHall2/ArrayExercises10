@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Numerics;
 using System.Xml;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -103,7 +104,7 @@ namespace ArrayExercises10
 
         int[] PrintArray(int[] array)
         {
-            Console.WriteLine("The indexes of the array are: ");
+            Console.WriteLine("The indexes of the array in order is: ");
             foreach (int num in theArray)
             {               
                 Console.WriteLine("-----------");
@@ -130,14 +131,31 @@ namespace ArrayExercises10
 
         int PrintHighest(int[] array)
         {
-            Console.WriteLine("The highest valued index in the array is: ");
-            Array.Sort(theArray);
+            int highestIndex = theArray[0];
+            
+            for (int i = 0; i < 5; i++)
+            {
+                if (theArray[i] > highestIndex)
+                {
+                    highestIndex = theArray[i];
+                }
+            }
+             Console.WriteLine("The highest valued index in the array is: " + highestIndex);
             return 0;
         }
 
         int PrintLowest(int[] array)
         {
-            Console.WriteLine("The lowest valued index in the array is: ");
+            int lowestIndex = theArray[0];
+
+            for (int i = 0; i < 5; i++)
+            {
+              if (theArray[i] < lowestIndex)
+                {
+                    lowestIndex = theArray[i];
+                }
+            }
+            Console.WriteLine("The lowest valued index in the array is: " + lowestIndex);
             return 0;
         }
 
